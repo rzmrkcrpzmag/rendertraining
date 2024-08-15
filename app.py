@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    #result_age = 0
+    result_age = 0
     if request.method == 'POST':
         try:
             age = request.form['age']
