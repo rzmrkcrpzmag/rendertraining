@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    result_age = 0
+    #result_age = 0
     if request.method == 'POST':
         try:
-            age = float(request.form['age'])
+            age = request.form['age']
             result_age = age + 6
         except ValueError:
             result_age = ""
